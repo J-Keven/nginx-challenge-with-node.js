@@ -1,0 +1,28 @@
+version: "3"
+
+services: 
+  nginx:
+    build: ./nginx/
+    container_name: nginx-app
+    ports: 
+      - 8080:80
+    depends_on: 
+      - app
+    
+  mysql: 
+    build: ./mysql/ 
+    container_name: mysql-app
+    environment: 
+      MYSQL_ROOT_PASSWORD: teste
+      MYSQL_DATABASE: node
+
+  app:
+    build: .
+    container_name: app
+    volumes: 
+      - ./:/usr/app
+    entrypoint: ./.docker/entrypoint.sh
+    depends_on: 
+      - mysql
+
+    
