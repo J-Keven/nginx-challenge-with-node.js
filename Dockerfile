@@ -1,10 +1,9 @@
 FROM node
 
-WORKDIR /usr/app
+WORKDIR /usr
 
 COPY . .
 
-RUN chmod +x .docker/entrypoint.sh  
-
+RUN npm install
 
 EXPOSE 3333

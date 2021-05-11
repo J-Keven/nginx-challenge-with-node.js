@@ -14,7 +14,9 @@ app.get("/", async (req, res) => {
   });
   await connection.connect()
 
-  await connection.query(`INSERT INTO people(name) VALUES ("${name}")`);
+  if (!!name) {
+    await connection.query(`INSERT INTO people(name) VALUES ("${name}")`);
+  }
 
   const [users] = await connection.query("SELECT * FROM people");
   const usersParse = users.map(user => `<li>${user.name}<li>`).toString().split(',').join('')
