@@ -24,7 +24,7 @@ app.get("/", async (req, res) => {
   connection.end();
   return res.send(`
   <h1>Full Cycle Rocks!</h1>
-  <p>Para add seu nome na lista acesse http://localhost:8080/?name=seunome<p>
+  <p>Para add seu nome na lista, passe o query params na request: name=seunome<p>
   <br/> <ul>${usersParse}<ul>`);
 });
 

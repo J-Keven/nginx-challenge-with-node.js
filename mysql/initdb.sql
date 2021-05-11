@@ -5,3 +5,5 @@ CREATE TABLE people (
   name varchar(200),
   PRIMARY KEY (id) 
 );
+
+INSERT INTO people(name) VALUES ("Keven")
