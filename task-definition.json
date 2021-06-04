@@ -31,7 +31,7 @@
       "memoryReservation": null,
       "volumesFrom": [],
       "stopTimeout": null,
-      "image": "amazon/amazon-ecs-sample",
+      "image": "ecs-devops-sandbox-repository:00000",
       "startTimeout": null,
       "firelensConfiguration": null,
       "dependsOn": null,
