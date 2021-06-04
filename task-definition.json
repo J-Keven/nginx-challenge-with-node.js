@@ -15,7 +15,13 @@
         }
       },
       "entryPoint": null,
-      "portMappings": [],
+      "portMappings": [
+        {
+          "hostPort": 3333,
+          "protocol": "tcp",
+          "containerPort": 3333
+        }
+      ],
       "command": null,
       "linuxParameters": null,
       "cpu": 0,
@@ -31,7 +37,7 @@
       "memoryReservation": null,
       "volumesFrom": [],
       "stopTimeout": null,
-      "image": "ecs-devops-sandbox-repository:00000",
+      "image": "ecs-devops-sandbox-repository:00000,
       "startTimeout": null,
       "firelensConfiguration": null,
       "dependsOn": null,
@@ -58,7 +64,7 @@
     "EC2",
     "FARGATE"
   ],
-  "taskDefinitionArn": "arn:aws:ecs:sa-east-1:309563997530:task-definition/ecs-devops-sandbox-task-definition:1",
+  "taskDefinitionArn": "arn:aws:ecs:sa-east-1:309563997530:task-definition/ecs-devops-sandbox-task-definition:3",
   "family": "ecs-devops-sandbox-task-definition",
   "requiresAttributes": [
     {
@@ -104,7 +110,7 @@
   ],
   "networkMode": "awsvpc",
   "cpu": "256",
-  "revision": 1,
+  "revision": 3,
   "status": "ACTIVE",
   "inferenceAccelerators": null,
   "proxyConfiguration": null,
